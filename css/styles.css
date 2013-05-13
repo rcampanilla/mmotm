@@ -1,0 +1,1148 @@
+* { margin: 0; padding: 0; }
+a, img { outline: none; border: none; text-decoration: none; }
+.self-clear {
+    _height: 1%;
+    *display: inline-block;
+    _display: block;
+}
+	.self-clear:after {
+		content: ".";
+		display: block;
+		height: 0;
+		visibility: hidden;
+		clear: both;
+	}
+
+body {
+	font-family: 'Gudea', serif;
+}
+
+.submit {
+	margin-left: -10px;
+}
+
+#index {
+	background: #e6e7e8 url(gfx/body_bg.jpg) no-repeat center top;
+}
+#signup {
+	background: url(gfx/bg_signup.jpg) no-repeat center top;
+}
+
+#header-wrapper {
+	background: url(gfx/menu_bg.png) no-repeat center top;
+	top: 0px;
+	width: 100%;
+	/* commented by george: if "fixed" then login dialog stays dark - it is okay for the header to not be fixed
+	position: fixed;
+	*/
+}
+
+#header {
+	/* chung: fixed width
+	background: url(gfx/menu_bg.png) no-repeat center top;
+	text-align: center;
+	width: 990px;
+	margin: 0 auto;
+	top: 0px;
+	width: 100%;*/
+	/* commented by george: if "fixed" then login dialog stays dark
+	position: fixed;
+	*/
+
+	margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: 0;
+    width: 990px;
+}
+	#header ul {
+		padding-top: 6px;
+		height: 45px;
+		list-style: none;
+	}
+	#header a {
+		font: bold 13px Verdana;
+		color: #939598;
+		padding: 0 10px;
+		text-decoration: none;
+	}
+	#logo {
+		float: left;
+		margin-top: 5px;
+		position: absolute;
+		left:0;
+	}
+	#login {
+		float: right;
+		width: 200px;
+		text-align: right;
+		margin-top: 8px;
+		position: absolute;
+		right: 10px;
+	}
+		#login a {
+			padding: 0;
+		}
+
+#intro {
+	padding:150px 0 120px;
+	width: 990px;
+	margin: 0 auto;
+}
+	#intro h1 {
+		font-family: "RussoOne Regular";
+		font-size: 50px;
+		line-height: 40px;
+	}
+	#intro h1 span {
+		font-size: 30px;
+	}
+	#intro h2 {
+		font-size: 20px;
+		font-weight: normal;
+		font-family: "Gudea";
+	}
+	#intro h3 {
+		font-size: 14px;
+		margin-left: 260px;
+	}
+
+#content {
+	width: 990px;
+	margin: 0 auto;
+}
+	#content h2 {
+		color:#939598;
+		font-size: 16px;
+		font-weight: normal;
+		padding-top: 15px;
+		padding-bottom: 10px;
+
+		font-family:"RussoOne Regular";
+	}
+		#content h2 span {
+			color: #58595B;
+			padding-left:15px;
+			font-size: 13px;
+		}
+	.col-1 {
+		width: 650px;
+		float: left;
+	}
+		.boxleft-top {
+			background: url(gfx/left_top.png) no-repeat left top;
+			height:10px;
+		}
+		.boxleft-mid {
+			background: url(gfx/left_mid.png) repeat-y left;
+			padding: 0 25px;
+		}
+		.boxleft-bottom {
+			background: url(gfx/left_bottom.png) no-repeat left top;
+			height:10px;
+		}
+
+	.col-2 {
+		width: 315px;
+		float: right;
+	}
+		.boxright-top {
+			background: url(gfx/right_top.png) no-repeat left top;
+			height:10px;
+		}
+		.boxright-mid {
+			background: url(gfx/right_mid.png) repeat-y left;
+			padding: 6px 14px;
+		}
+		.boxright-bottom {
+			background: url(gfx/right_bottom.png) no-repeat left top;
+			height:10px;
+		}
+
+	#updates {
+		margin-top: 6px;
+	}
+	.small-col-left {
+		background-color: #E2E6EB;
+		width: 328px;
+		padding:0 10px;
+		min-height: 200px;
+		float: left;
+	}
+		.small-col-left p {
+			font-size: 16px;
+			color:#58595B;
+		}
+		.small-col-left p strong {
+			color:#5D6E7C;
+		}
+	.small-col-right {
+		background-color:#F1F2F2;
+		float:right;
+		width: 220px;
+		min-height: 200px;
+		padding:0 10px;
+	}
+
+	#stay-connected {
+		font-size: 16px;
+		color:#58595B;
+		margin-top: 15px;
+	}
+		#stay-connected label {
+			float:left;
+		}
+		#stay-connected img {
+			float:left;
+			margin-left: 25px;
+		}
+
+	.right-sep {
+		background: #E4E4E4;
+		height: 2px;
+		margin: 8px auto;
+	}
+
+/* homepage video */
+#video-container {
+	width: 600px;
+	margin: 0 auto;
+}
+	#video-container h1 {
+		color: #fff;
+		font-size: 15px;
+		padding: 0 8px;
+		font-weight: normal;
+	}
+	#video-container h1 span, #container h1 a {
+		color: #999;
+		font-size: 11px;
+	}
+#current-video {
+	width: 349px;
+	float: left;
+}
+#playlists {
+	width: 241px;
+	height: 205px;
+	overflow: hidden;
+	float: right;
+	background: none repeat scroll 0 0 #2B2B2B;
+	position: relative;
+
+}
+#playlists:hover {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+	#playlists .row {
+		border-bottom: 1px solid #1D1D1D;
+		border-top: 1px solid #393939;
+	}
+		#playlists .row:hover {
+			background-color: #353535;
+			cursor: pointer;
+		}
+		#playlists .active {
+			color: #333;
+			background-color: #4F4F4F;
+		}
+		#playlists .active p span{
+			color: #fff!important;
+		}
+		#playlists .active label {
+			color:#fff!important;
+		}
+	#playlists .row label {
+		position: absolute;
+		font-weight: bold;
+		margin: 20px 0 0 15px;
+		color: #666666;
+		text-shadow: 1px 1px 0 #000000;
+	}
+	#playlists .row img {
+		margin: 4px 8px 4px 0px;
+		float: left;
+	}
+	#playlists .row p {
+		font-size: 13px;
+		color: #fff;
+		font-weight: bold;
+		padding:0 5px;
+		margin: 2px 0;
+	}
+	#playlists .row p span {
+		color: #666666;
+		font-weight: normal;
+		font-size: 11px;
+	}
+
+
+/* signup page */
+#signup-form {
+	text-align: center;
+	font-family: "Gudea";
+	font-size: 14px;
+}
+	#signup-form label {
+		color:#6d6e71;
+		padding: 10px 0 2px;
+		display: block;
+	}
+
+	#signup .col-2 {
+		margin-top: 200px;
+	}
+	#signup-form .rounded-textbox {
+		width: 220px;
+	}
+
+	.rounded-textbox {
+		background-color: #f1f2f2;
+		border: none;
+		font-size: 14px;
+		color: #939598;
+		text-align: center;
+		border-radius: 5px 5px 5px 5px;
+		border: 1px solid #d3d4d5;
+		padding: 3px;
+	}
+
+/*+ login module +*/
+#mask {
+	display: none;
+	background: #000;
+	position: fixed; left: 0; top: 0;
+	z-index: 10;
+	width: 100%; height: 100%;
+	opacity: 0.8;
+	z-index: 999;
+}
+
+.login-popup{
+	display:none;
+	background: #333;
+	padding: 10px;
+	border: 2px solid #ddd;
+	float: left;
+	font-size: 1.2em;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	box-shadow: 0px 0px 20px #999;
+	-moz-box-shadow: 0px 0px 20px #999; /* Firefox */
+    -webkit-box-shadow: 0px 0px 20px #999; /* Safari, Chrome */
+	border-radius:3px 3px 3px 3px;
+    -moz-border-radius: 3px; /* Firefox */
+    -webkit-border-radius: 3px; /* Safari, Chrome */
+	width: 752px;
+}
+
+img.btn_close {
+	float: right;
+	margin: -28px -28px 0 0;
+}
+
+fieldset {
+	border:none;
+}
+
+form.signin .textbox label {
+	display:block;
+	padding-bottom:7px;
+}
+
+form.signin .textbox span {
+	display:block;
+	color:yellow;
+	font-weight: bold;
+}
+
+form.signin p, form.signin span {
+	color:#999;
+	line-height:18px;
+}
+
+form.signin .textbox input {
+	background:#666666;
+	border-bottom:1px solid #333;
+	border-left:1px solid #000;
+	border-right:1px solid #333;
+	border-top:1px solid #000;
+	color:#fff;
+	border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	font:13px Arial, Helvetica, sans-serif;
+	padding:6px 6px 4px;
+	width:200px;
+}
+
+form.signin input:-moz-placeholder { color:#bbb; text-shadow:0 0 2px #000; }
+form.signin input::-webkit-input-placeholder { color:#bbb; text-shadow:0 0 2px #000;  }
+
+.button {
+	background: -moz-linear-gradient(center top, #f3f3f3, #dddddd);
+	background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dddddd));
+	background:  -o-linear-gradient(top, #f3f3f3, #dddddd);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
+	border-color:#000;
+	border-width:1px;
+	border-radius:4px 4px 4px 4px;
+	-moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+	color:#333;
+	cursor:pointer;
+	display:inline-block;
+	padding:6px 6px 4px;
+	margin-top:10px;
+	font:12px;
+	width:214px;
+}
+.button:hover { background:#ddd; }
+/*- login module -*/
+
+/* footer */
+#footer {
+	margin: 15px auto 0;
+    width: 970px;
+	color:#58595B;
+	font-size: 12px;
+	font-family: 'Univers', serif;
+	padding: 25px 10px;
+	/* background: url(gfx/footer-sep.png) no-repeat center top; */
+}
+	#footer img {
+		vertical-align: middle;
+	}
+	#footer label {
+		float:right;
+		color:#A7A9AC;
+		font-size:12px;
+	}
+
+	/*--$rey--*/
+	.body03 {
+	background: url(../images/BGreset.png) no-repeat center top #e6e7e8;
+}
+#container03 {
+	height: 720px;
+}
+#header03 {
+	background: url(../images/headerdsn.png) no-repeat center top;
+	padding-bottom: 10px;
+}
+
+
+#header03 h1 {
+	text-indent: -9999px;
+}
+
+#logo03 {
+	text-indent: -9999px;
+	background: url(../images/mmotmlogo.png) no-repeat center;
+
+	padding-top: 90px; 
+}
+
+#resetlabel #acc03{
+	font-family: "Russo One";
+	font-size: 32px;
+	padding-top: 40px;
+}
+
+
+#resetlabel #acc2{
+	font-family: "Russo One";
+	font-size: 20px;	
+}
+
+#input02 {
+	padding-top: 27px;
+}
+
+#input02 #submit01 {
+	background: url(../images/resetbtn.png) no-repeat scroll transparent ;
+	border-radius: 4px;
+	height: 25px;
+	width: 90px;
+}	
+
+#input02 #submit2 {
+	background: url(../images/verifybtn2.png) no-repeat scroll transparent ;
+	border-radius: 4px;
+	height: 25px;
+	width: 90px;
+	margin-left: 4px;
+}	
+
+#input02 #submit3 {
+	background: url(../images/update.png) no-repeat scroll transparent ;
+	border-radius: 4px;
+	height: 25px;
+	width: 90px;
+}	
+
+#input02 #pass02 {
+	border-radius: 4px;
+	height: 23px;
+	width: 185px;
+}
+
+#continue03 {
+	padding-top: 65px;
+}
+
+#continue03 #cont03 {
+	font-family: "Russo One";
+	font-size: 16px;
+	color: #6d6e71;
+
+}
+
+#continue03 #dslogo {
+	background: url(../images/divinesoulslogo.png) no-repeat scroll center;
+    text-indent: -9999px;
+    white-space:nowrap;
+	height: 75px;
+	width: 280px;
+	display:inline-block;
+}
+
+	/*--$rey--*/
+	
+	
+/*--$ren--*/
+html{
+	text-align:center;
+}
+.body01 { 
+	background: url(../images/bgsum.png) no-repeat center top #e6e7e8;
+}
+
+#amcontainer {
+	height: 1052px;
+
+}
+
+	#summary{	
+		font-family: "Gudea";
+		font-size:14px;
+		font-weight:bold;
+		position:relative;
+		z-index:0;top:240px;
+	}
+	
+	#settings{	
+		font-family: "Gudea";
+		font-size:14px;
+		font-weight:bold;
+		position:absolute;top:240px;left:754px;	
+	}
+	
+	#gamescodes{	
+		font-family: "Gudea";
+		font-size:14px;
+		font-weight:bold;
+		position:absolute;top:240px;left:834px;	
+	}
+	
+	#transaction{	
+		font-family: "Gudea";
+		font-size:14px;
+		font-weight:bold;
+		position:absolute;top:240px;left:976px;	
+	}
+	
+	#securityop{	
+		color:black;
+		font-family: "Gudea";
+		font-size:14px;
+		font-weight:bold;
+		position:absolute; top:240px;left:1144px;	
+	}
+
+a:link{
+	color:#000;
+	text-decoration: none;
+}
+
+a:hover{ 
+	color:#c94334;
+	font-weight:bold;
+}
+
+	#balance{
+		font-family: "Russo One";
+		color: #2c7dc6;
+		position:absolute;top:244.5px;left:1340px;
+	}
+	
+	#acchead{
+		font-family: "Russo One";
+		color: #2c7dc6;
+		
+	}
+
+	#cantlog{
+		font-family: "Gudea";
+		color:#acadae;
+	}
+	
+		#cantlog a:hover{
+			text-decoration:none;
+		}
+		
+/* Lester */	
+
+	#header_1 {
+		margin: 0 auto;
+		display: inline-block;
+	}
+	
+	#mmo_logo {
+		margin-left: -7px;
+		display: inline-block;
+		float: left;
+		margin-top: 7px;
+	}
+	
+	#head_links {
+		font-family: "Russo One";
+		margin: 0 auto;
+		display: inline-block;
+		margin-top: 10px;
+		margin-left: -98px;
+		font-weight: bold;
+	}
+	
+	#head_margin {
+		margin-left: 25px;
+		display: inline-block;
+	}
+	
+	#head_margin a:hover {
+		color: #000;
+		font-size: 13px;
+	}
+	
+	#head_margin a{
+		color: #8b8d8f;
+		font-size: 13px;
+	}
+	
+	#head_links #head_margin {
+		margin-left: 19px;
+		display: inline-block;
+	}
+	
+	#head_buttons {
+		display: inline-block;
+		float: right;
+		margin-left: 246px;
+		margin-top: -18px;
+	}
+	
+	#signup_button {
+		display: inline-block;
+	}
+	
+	#login_button {
+		display: inline-block;
+	}
+	
+	#pre_footer {
+		margin: 0 auto;
+		width: 383px;
+		margin-top: 50px;
+		text-align: left;
+	}
+	
+	#pre_footer a {
+		color: #8b8d8f;
+	}
+	
+	#acchead{
+		font-family: "Russo One";
+		color: #8b8d8f;
+		
+	}
+	
+	nav {
+		margin-top: -33px;
+		margin-left: -20px;
+		font-weight: bold;
+	}
+	
+	nav #nav_1 {
+		margin-left: 13px;
+		display: inline-block;
+	}
+
+	#nav_2 {
+		display: inline-block;
+		margin-left: -850px;
+		margin-top: -42px;
+	}
+	
+	#account_balance {
+		display: inline-block;
+		font-family: "Russo One";
+		height: 10px;
+	}
+	
+	#account_balance h1{
+		color: #2c7dc6;
+		margin-right: -75px;
+		float: right;
+		margin-top: -47px;
+		font-size: 35px;
+	}
+	
+	#account_balance h3{
+		float: right;
+		color: #2c7dc6;
+		margin-right: -127px;
+		margin-top: -39px;
+	}
+	
+	#account_balance span{
+		float: right;
+		font-size: 15px;
+		font-weight: normal;
+		margin-right: -166px;
+		margin-top: -3px;
+	}
+	
+	#account_balance #balance_nav {
+		margin-right: -218px;
+		font-size: 15px;
+		font-weight: normal;
+		margin-top: -3px;
+	}
+
+
+#supplinks {
+	font-family: "Russo One";
+	color: #8b8d8f;
+	float: right;
+	width: 170px;
+}
+
+#amanytv {
+	font-family: "Calibri", serif;
+	font-size: 12px;
+	color: #58595b;
+	display:inline-block;
+	margin-left: -520px;
+
+}
+
+#amanytv #amanytvlogo {
+	background: url(../images/anyTV.png) no-repeat center;
+	text-indent: -9999px;
+	white-space: nowrap;
+	height: 15px;
+	width: 38px;
+	display:inline-block;
+
+}
+#amfooter {
+	font-family: "Calibri";
+	font-size: 14px;
+	color: #a7a9ac;
+	z-index:0;
+	float: right;
+	display:inline-block;
+}
+
+table{
+padding-top:200px;
+}
+
+#table2{
+float:left;
+top:100px;
+
+}
+
+
+/*$froi*/
+
+.bg1
+{
+	background: url(../images/bg3.gif) no-repeat center top #e6e7e8;
+}
+
+#container {
+	height: 1052px;
+
+}
+
+#header h1 {
+	text-indent: -9999px;
+}
+
+#manage {
+	text-indent: -9999px;
+	background: url(../img/manage.png) no-repeat right;
+	padding-top: 125px;
+	margin-right: 205px;
+}
+
+#mmg{
+display:inline-block;
+margin-left: 606px;
+margin-top: -140px;
+}
+
+#mmg-loc{
+	height: 169px;
+width: 687px;
+margin: -84 auto;
+
+}
+
+/*#mmg-loctxt{
+	height: 0px;
+	width: 0px;
+	margin: 0 auto;
+	margin-top: 0px;
+}*/
+
+#mmg-txt{
+	font-family: 'Gudea', serif;
+	font-size: 12px;
+	display: inline-block;
+	color: #58595b;
+}
+
+#img1 {
+	position:absolute;
+	margin-left:-48px;
+}
+
+#img2 {
+	position:absolute;
+	margin-left:248px;
+}
+
+#img3 {
+	position:absolute;
+	margin-left:492px;
+}
+
+#center-img {
+	height: 430px;
+	width: 746px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+#input {
+	position: scroll;
+	padding-top: 0px;
+	float: right;
+	padding-right: 0px;
+}
+
+#input #submit {
+	background: url(../images/magnifyicon.png) no-repeat scroll transparent right ;
+	border-radius: 4px;
+	
+	height: 25px;
+	width: 25px;
+}	
+
+#input #pass {
+	border-radius: 4px;
+	height: 23px;
+	width: 185px;
+}
+
+#divider {
+	text-indent: -9999px;
+	background: url(../images/divider.png) no-repeat bottom;
+	height: 15px;
+	padding-bottom; 900px;
+}
+
+#anytv {
+	padding-top: 100px;
+	font-family: "Calibri", serif;
+	font-size: 12px;
+	color: #58595b;
+}
+
+#anytv #anytvlogo {
+	background: url(../images/anyTV.png) no-repeat center;
+	text-indent: -9999px;
+	white-space: nowrap;
+	height: 15px;
+	width: 38px;
+	display:inline-block;
+}
+
+#footer {
+	
+	font-family: "Calibri";
+	float: bottom;
+	font-size: 14px;
+	color: #a7a9ac;
+}
+#hdr_dsn2{
+text-indent: -9999px;
+}
+/*$froi*/
+
+/*******Jay*******/
+.body-mgmt{
+
+background: url(../images/bgsum.png) no-repeat center top #e6e7e8; /*jay*/
+}
+
+#inputmgmt {
+	padding-top: 27px;
+}
+
+.inputdiv {
+	position: relative;
+	margin: 0 auto;
+	padding-right: 200px;
+	height: 0px;
+	margin-right: -948px;
+
+}
+#submitmgmt {
+	background: url(../images/magnifyicon.png) no-repeat scroll transparent right;
+	border-radius: 4px;
+	height: 23px;
+	width: 30px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	margin-left: -76px;
+}
+
+#game-acct img {
+	
+	height: 40px;
+	width: 235px;
+}
+
+#inputmgmt #pass {
+	border-radius: 4px;
+	height: 23px;
+	width: 268px;
+	margin-bottom: 2.5px;
+	margin-left: -4px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+#ds-text h4{
+	color: #2c7dc6;
+	float:right;
+	margin-right: 70px;
+	margin-top: 16px;
+	font-weight: bold;
+}
+#ds-logo {
+	margin-left: 22px;
+	margin-top: -13px;
+}
+
+#acctdetails{
+	margin-left: -23px;
+}
+#acctsecurity{
+	margin-left: -32px;
+}
+
+#main-content {
+	margin: 0 auto;
+	margin-top: -60px;
+	/*background: /*#5a5a5a;*/
+	height: 457px;
+	width: 485px;
+	text-align: left;
+	padding-left: 15px;
+	padding-top: 20px;
+	color: #8b8d8f;
+}
+
+#main-content a{
+
+color: #2c7dc6;
+font-weight: normal;
+
+}
+
+
+#main-content h4{
+	font-size: 13px;
+}
+#main-content span{
+	font-size: 13px;
+}
+
+
+#info {
+	margin-bottom: 8px;
+}
+
+#box-2 {
+	float: right;	
+}
+
+#box-4 {
+	display: inline-block;
+	margin-right: -781px;
+	margin-top: 67px;
+}
+
+
+.content{
+
+position: center;
+margin-top: 230px;
+
+}
+
+
+#blocks{
+		color:#6e8499;
+		margin-top: 20px;
+		font-size: 6px;
+		font-weight: normal;
+
+
+}
+/*******end********/
+
+/*--$rey--*/
+html {	
+	text-align: center;
+	
+}
+
+
+.body03 {
+	background: url(../images/BGreset.png) no-repeat center top #e6e7e8;
+}
+
+#container03 {
+	height: 720px;
+
+}
+
+
+#header03 {
+	background: url(../images/headerdsn.png) no-repeat center top;
+	padding-bottom: 10px;
+}
+
+
+#header03 h1 {
+	text-indent: -9999px;
+}
+
+
+#logo03 {
+	text-indent: -9999px;
+	background: url(../images/mmotmlogo.png) no-repeat center;
+
+	padding-top: 90px; 
+}
+
+
+#resetlabel #acc03{
+	font-family: "Russo One";
+	font-size: 32px;
+	padding-top: 40px;
+}
+
+
+#resetlabel #acc2{
+	font-family: "Russo One";
+	font-size: 20px;	
+}
+
+
+#divider {
+	text-indent: -9999px;
+	background: url(../images/divider.png) no-repeat center;
+	height: 15px;
+
+}
+
+
+#input02 {
+	padding-top: 27px;
+}
+
+
+#input02 #submit01 {
+	background: url(../images/resetbtn.png) no-repeat scroll transparent ;
+	border-radius: 4px;
+	height: 25px;
+	width: 90px;
+	position: absolute;
+}	
+#input02 #submit3 {
+	background: url(../images/verifybtn.png) no-repeat scroll transparent ;
+	border-radius: 4px;
+	height: 25px;
+	width: 90px;
+	position: absolute;
+}	
+#input02 #submit2 {
+	background: url(../images/update.png) no-repeat scroll transparent ;
+	border-radius: 4px;
+	height: 25px;
+	width: 90px;
+	position: absolute;
+}	
+
+#input02 #pass {
+	border-radius: 4px;
+	height: 23px;
+	width: 185px;
+	margin-left: -108px;
+}
+#input02 #passe {
+	border-radius: 4px;
+	height: 23px;
+	width: 185px;
+	margin-left: -91px;
+}
+
+#input02 #passv {
+	border-radius: 4px;
+	height: 23px;
+	width: 185px;
+	margin-left: 0px;
+}
+
+#continue03 {
+	padding-top: 65px;
+}
+
+
+#continue03 #cont03 {
+	font-family: "Russo One";
+	font-size: 16px;
+	color: #6d6e71;
+
+}
+
+
+#continue03 #dslogo {
+	background: url(../images/divinesoulslogo.png) no-repeat scroll center;
+    text-indent: -9999px;
+    white-space:nowrap;
+	height: 75px;
+	width: 280px;
+	display:inline-block;
+	margin-top: 8px;
+}
+
+/*--$rey--*/
