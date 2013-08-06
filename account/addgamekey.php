@@ -388,60 +388,57 @@ if(!isset($_SESSION['userORM'])){
 		</div>
 		
 		<div class="content-wrap">
-			<div id="box-4">
-				<img src="images/add-game-key.png"/>
+			<div id="addgamekey-wrapper">
+				<div id="addgamekey">
+					<span>GAME MANAGEMENT</span>
+					<h1>Code Redemption</h1>
+					<hr>
+					<span>Use this page to redeem game keys, game time codes, game item codes, and pre-paid cards for Battle.net balance.</span>
+				</div>
+				<div id ="gamekeybox">
+					<form method="post" action="">
+						<p>Enter Code</p>
+						<input type="text" name ="gamekey" value ="" maxlength="320" tabindex="1">
+						<button class="btn" class="warning">REDEEM CODE</button>
+					</form>
+				</div>
+				<div id="gamekeyhelp">
+					<!-- <h1 class="headline">Need help redeeming a code?</h1>
+				    <span> Select a code type to see more information</span>
+
+				   <ul class="nav nav-list">
+				    <li class="nav-header" data-toggle="collapse" data-target="#test">
+				        <a>Locating the game key</a>
+				        <ul class="nav nav-list collapse" id="test" >
+				            <li>Example 1</li>
+				            <li>Example 2</li>
+				        </ul>
+				        
+				        
+				    </li>
+				    <li class="nav-header" data-toggle="collapse" data-target="#test2">
+				    	<a>Locating the game item code</a>
+				    	<ul class="nav nav-list collapse" id="test2" >
+				            <li>Example 1</li>
+				            <li>Example 2</li>
+				        </ul>
+				    </li>  
+				    <li class="nav-header" data-toggle="collapse" data-target="#test3">
+				    	<a>Locating the pre-paid balance code</a>
+				    	<ul class="nav nav-list collapse" id="test3" >
+				            <li>Example 1</li>
+				            <li>Example 2</li>
+				        </ul>
+				    </li>
+				  </ul>  --> 
+				  	<h2 style="float:left;">Need help?</h2>
+				  	<span><a href="#" class="gamekey-mail">Click here</a></span>
+				</div>
 			</div>
-		</div>
-	
-		<div class="content-wrap">
-		<div  id="main-content">
-			<div id="box-2">
-				<div id="game-acct">
-					<img src="images/game-acts.png"/>
-				</div>
-				<div id="gamelist">
-					<?php if($divineSoulsActive == 1) { ?>
-					<div id="ds-text">
-						<h4>DIVINE SOULS</h4>
-					</div>
-					<div id="ds-logo">
-						<img src="images/ds_logo.png"/>					
-					</div>	
-					<?php } ?>     
-				</div>
-			</div>
-			<div id="box-1">
-				<div id="acctdetails">
-					<img src="images/game-details.png"/>
-				</div>
-				<div id="user-info">
-					<div id="info">
-						<span>ACCOUNT NAME</span><br/>
-						<h4><?php echo $email; ?>[<a href="/mmo.tm/account/management/settings/account-reset.php">Edit</a>]</h4><br/>
-					</div>
-					<div id="info">
-						<span>NAME</span><br/>
-						<h4><?php echo $fullName; ?></h4>
-					</div>
-					<div id="info">
-						<span>COUNTRY OF RESIDENCE</span><br/>
-						<h4><?php echo $country; ?></h4>
-					</div>
-				</div>
-			</div>
-		
-			<div id="box-3" style="margin-top: 20px;">
-				<div id="acctsecurity">
-					<img src="images/accts-sec.png"/>
-				</div>
-				<div id="acct-info">
-				</div>
-			</div>					
-		</div>
 		</div>
 		
 		
-		<div class="content-wrap" style="margin-top:70px;">
+		<div class="content-wrap" style="margin-top:240px;">
 		<div id="pre_footer">
 			<div id="supplinks"><p>Support</p>
 				<p id="cantlog"><a href="../divinesouls/forum/index.php">Forum Support</a><br/>
@@ -473,4 +470,5 @@ if(!isset($_SESSION['userORM'])){
 </body>
 
 <?php } ?>
+
 </html>

@@ -388,56 +388,60 @@ if(!isset($_SESSION['userORM'])){
 		</div>
 		
 		<div class="content-wrap">
-			<div id="box-4">
-				<img src="images/add-game-key.png"/>
+			<div id="downloadgame-wrapper">
+				<div id="downloadgame">
+					<span>GAME MANAGEMENT</span>
+					<h1>Download Games</h1>
+					<hr>
+					<div id="downloadgame-filter">
+						<a href="">All Games</a> /
+						<a href="">Divine Souls</a> /
+						<a href="">World of Warcraft</a> /
+						<a href="">Starcraft II</a>
+					</div>
+				</div>
+				<div id="downloadgame-body">
+					<div id="downloadgame-header">
+						<img src="images/ds_logo.png">
+						<span>GAME CLIENT DOWNLOADS</span>
+						<h2>Divine Souls</h2>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col"></th>
+								<th scope="col"></th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row" colspan="2" class="gamedl-padding">
+									<img src="images/wow.png" class="gameclient-icon">
+									<h4>Game Client</h4>
+									<p class="language-selection">
+										<span class="region">Asia</span> / 
+										<span class="language">English (US) </span>
+										<a href="#" class="change-language" style="color: #0072a3;"onclick ="showHide('divinesouls-full');return false;">(Change)</a>
+									</p>
+									<div id ="divinesouls-full" class="region-select-div-hidden">
+										<p>Available Regions</p>
+										<p class="region-selector">
+											<a href="#" class="active">Asia</a> / 
+											<a href="#">Philippines</a> / 
+											<a href="#">Japan</a> / 
+											<a href="#">Korea</a> /
+										</p>
+									</div>
+								</th>
+								<td><a href="http://download.mmo.tm/">Windows</a></td>
+								<td><a href="#">Mac</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-		</div>
-	
-		<div class="content-wrap">
-		<div  id="main-content">
-			<div id="box-2">
-				<div id="game-acct">
-					<img src="images/game-acts.png"/>
-				</div>
-				<div id="gamelist">
-					<?php if($divineSoulsActive == 1) { ?>
-					<div id="ds-text">
-						<h4>DIVINE SOULS</h4>
-					</div>
-					<div id="ds-logo">
-						<img src="images/ds_logo.png"/>					
-					</div>	
-					<?php } ?>     
-				</div>
-			</div>
-			<div id="box-1">
-				<div id="acctdetails">
-					<img src="images/game-details.png"/>
-				</div>
-				<div id="user-info">
-					<div id="info">
-						<span>ACCOUNT NAME</span><br/>
-						<h4><?php echo $email; ?>[<a href="/mmo.tm/account/management/settings/account-reset.php">Edit</a>]</h4><br/>
-					</div>
-					<div id="info">
-						<span>NAME</span><br/>
-						<h4><?php echo $fullName; ?></h4>
-					</div>
-					<div id="info">
-						<span>COUNTRY OF RESIDENCE</span><br/>
-						<h4><?php echo $country; ?></h4>
-					</div>
-				</div>
-			</div>
-		
-			<div id="box-3" style="margin-top: 20px;">
-				<div id="acctsecurity">
-					<img src="images/accts-sec.png"/>
-				</div>
-				<div id="acct-info">
-				</div>
-			</div>					
-		</div>
 		</div>
 		
 		
@@ -473,4 +477,5 @@ if(!isset($_SESSION['userORM'])){
 </body>
 
 <?php } ?>
+
 </html>
