@@ -364,8 +364,8 @@ if(!isset($_SESSION['userORM'])){
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-								<li><a href="/mmo.tm/account/management/settings/account-reset.php">Order History</a></li>
-								<li><a href="/mmo.tm/account/management/settings/password-reset.php">Balance History</a></li>
+								<li><a href="/mmo.tm/account/orderhistory.php?view=4">Order History</a></li>
+								<li><a href="/mmo.tm/account/balancehistory.php?view=4">Balance History</a></li>
 							</ul>
 					</div>
 					<div id="account_balance">
@@ -418,25 +418,43 @@ if(!isset($_SESSION['userORM'])){
 						<tbody>
 							<tr>
 								<th scope="row" colspan="2" class="gamedl-padding">
-									<img src="images/wow.png" class="gameclient-icon">
+									<img src="images/png/32x32/lock.png" class="gameclient-icon">
 									<h4>Game Client</h4>
 									<p class="language-selection">
-										<span class="region">Asia</span> / 
+										<!-- <span class="region">America</span> /  -->
 										<span class="language">English (US) </span>
-										<a href="#" class="change-language" style="color: #0072a3;"onclick ="showHide('divinesouls-full');return false;">(Change)</a>
+										<!-- <a onclick="document.getElementById('divinesouls-full').style.display='block';return false;" href="#" class="change-language" style="color: #0072a3;">(Change)</a> -->
 									</p>
-									<div id ="divinesouls-full" class="region-select-div-hidden">
-										<p>Available Regions</p>
+									<div id ="divinesouls-full" class="region-select-div-show">
+										<!-- <p>Available Regions</p>
 										<p class="region-selector">
-											<a href="#" class="active">Asia</a> / 
-											<a href="#">Philippines</a> / 
-											<a href="#">Japan</a> / 
-											<a href="#">Korea</a> /
+											<a href="#" class="active">Asia </a> / 
+											<a href="#"> Philippines </a> / 
+											<a href="#"> Japan </a> / 
+											<a href="#">Korea</a>
+										</p>
+											<div class="available-languages">
+												<p>Available Languages for America</p>
+												<p class="language-selector">
+													<a href="#">Tagalog </a> / 
+													<a href="#"> Bisaya </a> /
+													<a href="#"> Abakada</a>
+
+												</p> 
+											</div> -->
+										<p class = "save">
+											<a onclick="document.getElementById('divinesouls-full').style.display='none';return false;" href="#" style="color: #0072a3;">SAVE</a>
 										</p>
 									</div>
 								</th>
-								<td><a href="http://download.mmo.tm/">Windows</a></td>
-								<td><a href="#">Mac</a></td>
+								<td class="gamedl-link">
+									<span ><img src="images/win7.png" class="dl-icon"></span>
+									<a href="http://download.mmo.tm/">Windows</a>
+								</td>
+								<td class="gamedl-link">
+									<span ><img src="images/macicon.png" class="dl-icon"></span>
+									<a href="#">Mac</a>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -445,7 +463,7 @@ if(!isset($_SESSION['userORM'])){
 		</div>
 		
 		
-		<div class="content-wrap" style="margin-top:70px;">
+		<div class="content-wrap" style="top: 880px; position: absolute;">
 		<div id="pre_footer">
 			<div id="supplinks"><p>Support</p>
 				<p id="cantlog"><a href="../divinesouls/forum/index.php">Forum Support</a><br/>
@@ -458,18 +476,17 @@ if(!isset($_SESSION['userORM'])){
 			
 			</div>
 		</div>
-		</div>
 
-		
-		<div class="content-wrap">
-		<div id="footer">
-			<div id="amanytv">
-				part of the <a href="http://www.any.tv" title="any.TV" id="amanytvlogo" >any.TV</a> family
-			</div><!--end anytv-->
-			<div id="amfooter">
-				Copyright &copy; 2013 any.TV. All Rights Reserved.					
+		<div class="content-wrap" style="position: absolute; bottom: -100px;">
+			<div id="footer">
+				<div id="amanytv">
+					part of the <a href="http://www.any.tv" title="any.TV" id="amanytvlogo" >any.TV</a> family
+				</div><!--end anytv-->
+				<div id="amfooter">
+					Copyright &copy; 2013 any.TV. All Rights Reserved.					
+				</div>
+				<!--end footer-->
 			</div>
-			<!--end footer-->
 		</div>
 		</div>
 	</div>

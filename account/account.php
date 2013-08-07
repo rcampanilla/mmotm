@@ -364,8 +364,8 @@ if(!isset($_SESSION['userORM'])){
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-								<li><a href="/mmo.tm/account/management/settings/account-reset.php">Order History</a></li>
-								<li><a href="/mmo.tm/account/management/settings/password-reset.php">Balance History</a></li>
+								<li><a href="/mmo.tm/account/orderhistory.php?view=4">Order History</a></li>
+								<li><a href="/mmo.tm/account/balancehistory.php?view=4">Balance History</a></li>
 							</ul>
 					</div>
 					<div id="account_balance">

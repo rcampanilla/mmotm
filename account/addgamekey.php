@@ -364,8 +364,8 @@ if(!isset($_SESSION['userORM'])){
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-								<li><a href="/mmo.tm/account/management/settings/account-reset.php">Order History</a></li>
-								<li><a href="/mmo.tm/account/management/settings/password-reset.php">Balance History</a></li>
+								<li><a href="/mmo.tm/account/orderhistory.php?view=4">Order History</a></li>
+								<li><a href="/mmo.tm/account/balancehistory.php?view=4">Balance History</a></li>
 							</ul>
 					</div>
 					<div id="account_balance">
@@ -399,38 +399,11 @@ if(!isset($_SESSION['userORM'])){
 					<form method="post" action="">
 						<p>Enter Code</p>
 						<input type="text" name ="gamekey" value ="" maxlength="320" tabindex="1">
-						<button class="btn" class="warning">REDEEM CODE</button>
+						<button class="btn btn-primary">REDEEM CODE</button>
 					</form>
 				</div>
 				<div id="gamekeyhelp">
-					<!-- <h1 class="headline">Need help redeeming a code?</h1>
-				    <span> Select a code type to see more information</span>
-
-				   <ul class="nav nav-list">
-				    <li class="nav-header" data-toggle="collapse" data-target="#test">
-				        <a>Locating the game key</a>
-				        <ul class="nav nav-list collapse" id="test" >
-				            <li>Example 1</li>
-				            <li>Example 2</li>
-				        </ul>
-				        
-				        
-				    </li>
-				    <li class="nav-header" data-toggle="collapse" data-target="#test2">
-				    	<a>Locating the game item code</a>
-				    	<ul class="nav nav-list collapse" id="test2" >
-				            <li>Example 1</li>
-				            <li>Example 2</li>
-				        </ul>
-				    </li>  
-				    <li class="nav-header" data-toggle="collapse" data-target="#test3">
-				    	<a>Locating the pre-paid balance code</a>
-				    	<ul class="nav nav-list collapse" id="test3" >
-				            <li>Example 1</li>
-				            <li>Example 2</li>
-				        </ul>
-				    </li>
-				  </ul>  --> 
+			
 				  	<h2 style="float:left;">Need help?</h2>
 				  	<span><a href="#" class="gamekey-mail">Click here</a></span>
 				</div>

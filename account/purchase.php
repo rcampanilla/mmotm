@@ -105,8 +105,29 @@ $paypal_id='uekigx@gmail.com'; // Business email ID
 						</div>
 					</div>
 
-					<div class="nav_1"><a href="" style ="color: rgb(139, 141, 143);">Games & Codes</a></div>
-					<div class="nav_1"><a href="" style ="color: rgb(139, 141, 143);">Transaction History</a></div>
+					<div id="nav_1" class="btn-group dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								
+								<span class="userInfoHeader">Games & Codes</span>
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+								<li><a href="/mmo.tm/account/addgamekey.php?view=4">Add a game key</a></li>
+								<li><a href="/mmo.tm/account/downloadgameclient.php?view=4">Download game clients</a></li>
+							</ul>
+					</div>
+
+					<div id="nav_1" class="btn-group dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+								
+								<span class="userInfoHeader">Transaction History</span>
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+								<li><a href="/mmo.tm/account/orderhistory.php?view=4">Order History</a></li>
+								<li><a href="/mmo.tm/account/balancehistory.php?view=4">Balance History</a></li>
+							</ul>
+					</div>
 					<div id="account_balance">
 						<span>
 							<b id="cur_balance"><?php echo $mmoPointBalance; ?></b>
@@ -249,3 +270,6 @@ $paypal_id='uekigx@gmail.com'; // Business email ID
 </body>
 
 </html>
+<?php
+
+?>
