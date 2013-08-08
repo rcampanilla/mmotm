@@ -7,7 +7,8 @@ if(!isset($_SESSION['userORM'])){
 
 ?>
 <?php
-$paypal_url='https://www.sandbox.paypal.com/cgi-bin/webscr'; // Test Paypal API URL
+//$paypal_url='https://www.sandbox.paypal.com/cgi-bin/webscr'; // Test Paypal API URL
+$paypal_url='record.php'; // Test Paypal API URL
 $paypal_id='uekigx@gmail.com'; // Business email ID
 ?>
 
@@ -48,7 +49,8 @@ $paypal_id='uekigx@gmail.com'; // Business email ID
 
 <body>
 	<?php
-	$paypal_url='https://www.sandbox.paypal.com/cgi-bin/webscr'; // Test Paypal API URL
+	//$paypal_url='https://www.sandbox.paypal.com/cgi-bin/webscr'; // Test Paypal API URL
+	$paypal_url='record.php'; // Test Paypal API URL
 	$paypal_id='uekigx@gmail.com'; // Business email ID
 	?>
 	<div class = "body-mgmt">

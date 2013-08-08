@@ -397,29 +397,29 @@ if(!isset($_SESSION['userORM'])){
 				<div id="order-header">
 					<div id="order-area">
 						<div class="input-group">
-					      <form class="form-inline">
+					      <form class="form-inline" action="balancehistory.php?view=4" method="POST">
 					      <span class="input-group-addon">
-					        <input type="radio" name="option1">
+					        <input type="radio" name="option1" value="chose1">
 					      </span>
 					      <span>Recent Transactions</span>
-							<input type="radio" name="option1">
-							<select class="form-control">
-							  <option>January</option>
-							  <option>Febuary</option>
-							  <option>March</option>
-							  <option>April</option>
-							  <option>May</option>
-							  <option>June</option>
-							  <option>July</option>
-							  <option>August</option>
-							  <option>September</option>
-							  <option>October</option>
-							  <option>November</option>
-							  <option>December</option>
+							<input type="radio" name="option1" value="chose2">
+							<select class="form-control" name="month">
+							  <option value='1'>January</option>
+							  <option value='2'>Febuary</option>
+							  <option value='3'>March</option>
+							  <option value='4'>April</option>
+							  <option value='5'>May</option>
+							  <option value='6'>June</option>
+							  <option value='7'>July</option>
+							  <option value='8'>August</option>
+							  <option value='9'>September</option>
+							  <option value='10'>October</option>
+							  <option value='11'>November</option>
+							  <option value='12'>December</option>
 							</select>
-						    <select class="form-control">
-						      <option>2013</option>
-						      <option>2012</option>
+						    <select class="form-control" name="year">
+						      <option value='2013'>2013</option>
+						      <option value='2012'>2012</option>
 						    </select>
 						    <button class="btn btn-primary">SHOW</button>
 					    </div>
@@ -440,13 +440,66 @@ if(!isset($_SESSION['userORM'])){
 						<table class="table table-hover" style="width:92.5%;">
 							<tr>
 								<th>ORDER#</th>
-								<th>DATE</th>
+								<th>DATE & TIME</th>
 								<th>PRODUCT</th>
-								<th>UNIT PRICE</th>
-								<!-- <th>QUANTITY</th>
-								<th>STATUS</th> -->
-								<th>TOTAL</th>
-							</tr>
+								<th>Amount</th>
+								<th>Balance</th>
+							</tr><?php
+								if(isset($_POST['option1'])){
+									if($_POST['option1']=='chose2'){
+										$month = $_POST['month'];
+										$year = $_POST['year'];
+										$values = $year.'-'.$month;
+
+										$email1 = $_SESSION['userORM'];
+										$result1 = mysql_query("SELECT * FROM users WHERE email='$email1'");
+
+										while($row2 = mysql_fetch_array($result1))
+										{
+											$user_email = $row2['id'];
+										}
+
+										$result2 = mysql_query("SELECT * FROM balance_hist WHERE date LIKE '%$values' AND  user_id='$user_email' ORDER BY date DESC");
+
+										while($row1 = mysql_fetch_array($result2))
+										{
+											echo "<tr><td>".$row1['ordernum']."</td><td>".$row1['date']."</td><td>".$row1['product']."</td><td>".$row1['amount']."</td><td>".$row1['balance']."</td></tr>";
+										}
+
+									}else{
+										$email1 = $_SESSION['userORM'];
+										$result1 = mysql_query("SELECT * FROM users WHERE email='$email1'");
+
+										while($row2 = mysql_fetch_array($result1))
+										{
+											$user_email = $row2['id'];
+										}
+
+										$result2 = mysql_query("SELECT * FROM balance_hist WHERE user_id='$user_email' ORDER BY date DESC");
+
+										while($row1 = mysql_fetch_array($result2))
+										{
+											echo "<tr><td>".$row1['ordernum']."</td><td>".$row1['date']."</td><td>".$row1['product']."</td><td>".$row1['amount']."</td><td>".$row1['balance']."</td></tr>";
+										}
+									}
+
+								}else{
+									$email1 = $_SESSION['userORM'];
+									$result1 = mysql_query("SELECT * FROM users WHERE email='$email1'");
+
+									while($row2 = mysql_fetch_array($result1))
+									{
+										$user_email = $row2['id'];
+									}
+
+									$result2 = mysql_query("SELECT * FROM balance_hist WHERE user_id='$user_email' ORDER BY date DESC");
+
+									while($row1 = mysql_fetch_array($result2))
+									{
+										echo "<tr><td>".$row1['ordernum']."</td><td>".$row1['date']."</td><td>".$row1['product']."</td><td>".$row1['amount']."</td><td>".$row1['balance']."</td></tr>";
+									}
+								}
+								?>
 						</table>
 					</div>
 				</div>
