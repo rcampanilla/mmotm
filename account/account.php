@@ -352,8 +352,8 @@ if(!isset($_SESSION['userORM'])){
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-								<li><a href="/mmo.tm/account/addgamekey.php?view=4">Add a game key</a></li>
-								<li><a href="/mmo.tm/account/downloadgameclient.php?view=4">Download game clients</a></li>
+								<li><a href="/mmo.tm/account/addgamekey.php">Add a game key</a></li>
+								<li><a href="/mmo.tm/account/downloadgameclient.php">Download game clients</a></li>
 							</ul>
 					</div>
 
@@ -364,8 +364,8 @@ if(!isset($_SESSION['userORM'])){
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-								<li><a href="/mmo.tm/account/orderhistory.php?view=4">Order History</a></li>
-								<li><a href="/mmo.tm/account/balancehistory.php?view=4">Balance History</a></li>
+								<li><a href="/mmo.tm/account/orderhistory.php">Order History</a></li>
+								<li><a href="/mmo.tm/account/balancehistory.php">Balance History</a></li>
 							</ul>
 					</div>
 					<div id="account_balance">
@@ -386,14 +386,12 @@ if(!isset($_SESSION['userORM'])){
 				</nav>
 			</div>
 		</div>
-		
-		<div class="content-wrap">
-			<div id="box-4">
+		<div class="content-wrap" style="margin-top:50px;">
+		<div id="box-4" style="margin-right: 70px;">
+				<a href="/mmo.tm/account/addgamekey.php">
 				<img src="images/add-game-key.png"/>
+				</a>
 			</div>
-		</div>
-	
-		<div class="content-wrap">
 		<div  id="main-content">
 			<div id="box-2">
 				<div id="game-acct">
@@ -401,12 +399,12 @@ if(!isset($_SESSION['userORM'])){
 				</div>
 				<div id="gamelist">
 					<?php if($divineSoulsActive == 1) { ?>
+					<div id="ds-logo">
+						<img src="images/ds_logo.png"/>					
+					</div>
 					<div id="ds-text">
 						<h4>DIVINE SOULS</h4>
 					</div>
-					<div id="ds-logo">
-						<img src="images/ds_logo.png"/>					
-					</div>	
 					<?php } ?>     
 				</div>
 			</div>

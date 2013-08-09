@@ -5,8 +5,6 @@ if(!isset($_SESSION['userORM'])){
 	header("Location: http://localhost/mmo.tm/divinesouls");
 }
 
-?>
-<?php
 //$paypal_url='https://www.sandbox.paypal.com/cgi-bin/webscr'; // Test Paypal API URL
 $paypal_url='record.php'; // Test Paypal API URL
 $paypal_id='uekigx@gmail.com'; // Business email ID
@@ -81,8 +79,8 @@ $paypal_id='uekigx@gmail.com'; // Business email ID
 		<div id="seek" >
 			<span id="scout1" >
 				<form action="http://www.mmo.tm/account/account.php?view=1" method="#" >
-					<input id="submitmgmt2" type="submit" value="" name="submit" />
 					<input id="submitmgmtsearch" type="text" placeholder="Search" id="pass" required/>
+					<input id="submitmgmt2" type="submit" value="" name="submit" />
 				</form>
 			</span>
 		</div>
@@ -93,8 +91,9 @@ $paypal_id='uekigx@gmail.com'; // Business email ID
 				<nav>
 					<div class="nav_2"><img src="images/my-account-icon.png"/></div>
 
-					<div class="nav_1"><a style="margin-right: 50px;" href="/mmo.tm/account/account.php?view=4">Summary</a>
-						<div class="btn-group dropdown">
+					<div class="nav_1"><a style="margin-right: 21px;" href="/mmo.tm/account/account.php?view=4">Summary</a></div>
+
+					<div id="nav_1" class="btn-group dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 								
 								<span class="userInfoHeader">Settings</span>
@@ -105,7 +104,6 @@ $paypal_id='uekigx@gmail.com'; // Business email ID
 								<li><a href="/mmo.tm/account/management/settings/password-reset.php">Password Reset</a></li>
 							</ul>
 						</div>
-					</div>
 
 					<div id="nav_1" class="btn-group dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -135,13 +133,7 @@ $paypal_id='uekigx@gmail.com'; // Business email ID
 							<b id="cur_balance"><?php echo $mmoPointBalance; ?></b>
 							&nbsp;mmoPts
 						</span></br>
-						<a href="purchase.php" onclick="
-						<?php if(!isset($_SESSION['userORM'])){ 
-							echo "alert('You need to be logged in to charge points.');return false;";
-						}else{
-							echo "return true";
-						}?>
-						">
+						<a href="purchase.php">
 						<img src="images/charge.png" id="charge_balance" />
 					</a>
 				</div>
@@ -149,14 +141,15 @@ $paypal_id='uekigx@gmail.com'; // Business email ID
 		</div>
 	</div>
 
-	<div class="content-wrap">
-		<div id="box-4">
-			<img src="images/add-game-key.png"/>
-		</div>
-	</div>
-	
-	<div class="content-wrap">
+	<div class="content-wrap" style="margin: 50px 22px 0px 0px; width: 1010px;">
+		
+		<div class="content-wrap">
 		<div  id="main-content" style="width: 960px;">
+			<div id="box-4">
+			<a href="/mmo.tm/account/addgamekey.php?view=4">
+				<img src="images/add-game-key.png"/>
+			</a>
+			</div>
 			<div id="box-1">
 				<div style="margin-left: 200px;">
 					<img src="images/game-recharge.png"/>
@@ -241,6 +234,9 @@ $paypal_id='uekigx@gmail.com'; // Business email ID
 			</div>			
 		</div>
 	</div>
+	</div>
+	
+	
 
 	<div class="content-wrap" style="margin-top:70px;">
 		<div id="pre_footer">
@@ -272,6 +268,3 @@ $paypal_id='uekigx@gmail.com'; // Business email ID
 </body>
 
 </html>
-<?php
-
-?>

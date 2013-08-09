@@ -854,14 +854,12 @@
 	}
 	#ds-text h4{
 		color: #2c7dc6;
-		float:right;
-		margin-right: 70px;
-		margin-top: 16px;
+		float:left;
 		font-weight: bold;
+		margin: 18px;
 	}
 	#ds-logo {
-		margin-left: 22px;
-		margin-top: -13px;
+		float: left;
 	}
 
 	#acctdetails{
@@ -873,13 +871,10 @@
 
 	#main-content {
 		margin: 0 auto;
-		margin-top: -60px;
 		/*background: /*#5a5a5a;*/
 		height: 457px;
 		width: 485px;
 		text-align: left;
-		padding-left: 15px;
-		padding-top: 20px;
 		color: #8b8d8f;
 	}
 
@@ -893,7 +888,7 @@
 
 	#main-content h4{
 		font-size: 13px;
-		margin: 0px;
+		/*margin: 0px;*/
 	}
 	#main-content span{
 		font-size: 13px;
@@ -916,8 +911,8 @@
 
 	#box-4 {
 		display: inline-block;
-		margin-right: -781px;
-		margin-top: 67px;
+		/*margin: 67px 70px 0px 0px;*/
+		float: right;
 	}
 
 	.content-wrap {
@@ -1594,7 +1589,7 @@
 	}
 
 	#addgamekey, #ordergame , #downloadgame #downloadgame-header hr {
-		width: 950px;
+		width: 935px;
 	}
 
 	#addgamekey, #ordergame , #downloadgame span {
@@ -1782,7 +1777,6 @@
 	}
 
 	#order-area {
-		width: 92.5%;
 		position: relative;
 		margin-top: 10px;
 	}
@@ -1819,6 +1813,7 @@
 	.form-inline .form-control {
 		width: 23%;
 	}
+
 	#click_here{
 		color:white;
 	}
